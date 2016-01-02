@@ -74,8 +74,11 @@ def boggle_input():
     for i in range(5):
         board.append(raw_input().split())
     words = find_words(board)
+    total_points = 0
     for word, points in words:
+        total_points += points
         print word + " " + str(points)
+    print total_points
 
 if __name__ == '__main__':
     load_dictionary()
